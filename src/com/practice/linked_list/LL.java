@@ -1,6 +1,5 @@
 package com.practice.linked_list;
 
-import org.omg.Messaging.SyncScopeHelper;
 public class LL {
 
     private Node head;
