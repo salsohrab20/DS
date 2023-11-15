@@ -33,10 +33,10 @@ public class LL {
 
     public void displayUsingRecursion(Node head) {
         Node temp = head;
-        if (temp == null){
+        if (temp == null) {
             return;
         }
-        System.out.print(temp.value+"-> ");
+        System.out.print(temp.value + "-> ");
         displayUsingRecursion(temp.next);
     }
 
