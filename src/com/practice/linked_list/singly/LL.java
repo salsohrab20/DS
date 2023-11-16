@@ -1,4 +1,4 @@
-package com.practice.linked_list;
+package com.practice.linked_list.singly;
 
 public class LL {
 

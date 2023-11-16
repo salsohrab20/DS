@@ -1,5 +1,6 @@
-package com.practice.linked_list;
+package com.practice.linked_list.singly;
 
+import com.practice.linked_list.singly.LL;
 public class Main {
     public static void main(String[] args) {
         LL linkedList = new LL();
