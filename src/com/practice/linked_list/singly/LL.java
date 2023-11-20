@@ -123,28 +123,52 @@ public class LL {
         System.out.print(temp.value + "-> ");
     }
 
-    public int getKthNodeFromEnd(int k){
+    public int getKthNodeFromEnd(int k) {
         Node fp = head;
         Node sp = head;
-        for(int i =1;i<=k;i++){
-            fp=fp.next;
+        for (int i = 1; i <= k; i++) {
+            fp = fp.next;
         }
-        while(fp!=null){
-            sp=sp.next;
-            fp=fp.next;
+        while (fp != null) {
+            sp = sp.next;
+            fp = fp.next;
         }
         return sp.value;
-
     }
 
-    public int middleOfLL(LL linkList){
-        Node fp=head;
-        Node sp=head;
-        while(fp.next!=null && fp.next.next!=null){
-            fp=fp.next.next;
-            sp=sp.next;
+    public int middleOfLL(LL linkList) {
+        Node fp = head;
+        Node sp = head;
+        while (fp.next != null && fp.next.next != null) {
+            fp = fp.next.next;
+            sp = sp.next;
         }
         return sp.value;
+    }
+
+    public LL mergeTwoLinkedList(LL linkList1, LL linkList2) {
+        Node first = linkList1.head;
+        Node second = linkList2.head;
+        LL res = new LL();
+        while (first != null && second != null) {
+            if(first.value< second.value){
+                res.insertLast(first.value);
+                first=first.next;
+            }
+            else{
+                res.insertLast(second.value);
+                second=second.next;
+            }
+        }
+        while(first!=null){
+            res.insertLast(first.value);
+            first=first.next;
+        }
+        while(second!=null){
+            res.insertLast(second.value);
+            second = second.next;
+        }
+        return res;
     }
 
     protected class Node {
