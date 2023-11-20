@@ -123,7 +123,21 @@ public class LL {
         System.out.print(temp.value + "-> ");
     }
 
-    private class Node {
+    public int getKthNodeFromEnd(int k){
+        Node fp = head;
+        Node sp = head;
+        for(int i =1;i<=k;i++){
+            fp=fp.next;
+        }
+        while(fp!=tail){
+            sp=sp.next;
+            fp=fp.next;
+        }
+        return sp.value;
+
+    }
+
+    protected class Node {
         int value;
         Node next;
 
