@@ -129,7 +129,7 @@ public class LL {
         for(int i =1;i<=k;i++){
             fp=fp.next;
         }
-        while(fp!=tail){
+        while(fp!=null){
             sp=sp.next;
             fp=fp.next;
         }
