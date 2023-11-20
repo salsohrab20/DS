@@ -137,6 +137,16 @@ public class LL {
 
     }
 
+    public int middleOfLL(LL linkList){
+        Node fp=head;
+        Node sp=head;
+        while(fp.next!=null && fp.next.next!=null){
+            fp=fp.next.next;
+            sp=sp.next;
+        }
+        return sp.value;
+    }
+
     protected class Node {
         int value;
         Node next;
